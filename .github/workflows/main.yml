@@ -92,7 +92,7 @@ jobs:
       
       - name: Deploy Amazon ECS
         id: deploy-amazon-ecs
-        uses: aws-actions/amazon-ecs-deploy-definition@v2
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v2
         with:
           task-definition: ${{ steps.render-task-definition.outputs.task-definition }}
           service: widget-server
